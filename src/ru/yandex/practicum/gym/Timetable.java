@@ -69,6 +69,7 @@ public class Timetable {
             return count;
         }
     }
+
     public List<CounterOfTrainings> getCountByCoaches() {
         Map<Coach, Integer> coachCounts = new HashMap<>();
 
