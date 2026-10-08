@@ -189,7 +189,8 @@ public class TimetableTest {
         Coach coach1 = new Coach("Иванов", "Иван", "Иванович");
         Coach coach2 = new Coach("Иванов", "Иван", "Иванович");
 
-        Assertions.assertNotEquals(coach1, coach2, "Это должны быть разные объекты в памяти");
+        Assertions.assertNotSame(coach1, coach2, "Это должны быть разные объекты в памяти (разные ссылки)");
+
         Assertions.assertEquals(coach1, coach2, "Но по содержанию (ФИО) они должны быть равны");
 
         timetable.addNewTrainingSession(new TrainingSession(group, coach1, DayOfWeek.MONDAY,
